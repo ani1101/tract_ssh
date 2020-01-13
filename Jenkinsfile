@@ -13,7 +13,6 @@ pipeline {
     when {
         branch "master"
     }
-  stages {
     stage('Install and Build') {
       steps {
         sh """
