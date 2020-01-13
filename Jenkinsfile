@@ -10,11 +10,6 @@ pipeline {
   }
 
   stages {
-    stage('Start') {
-      steps {
-        bitbucketStatusNotify(buildState: 'INPROGRESS')
-      }
-    }
     stage('Install and Build') {
       steps {
         sh """
