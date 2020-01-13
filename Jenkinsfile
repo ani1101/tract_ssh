@@ -1,14 +1,8 @@
 pipeline {
   agent {
     node {
-      label 'master'
+      label 'build'
     }
-  }
-
-  options {
-    ansiColor('xterm')
-    buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
-    timeout(time: 60, unit: 'MINUTES')
   }
 
   triggers {
