@@ -8,11 +8,7 @@ pipeline {
   triggers {
     pollSCM('H/15 * * * *')
   }
- 
- stages('Build on master') {
-    when {
-        branch "master"
-    }
+   stages {
     stage('Install and Build') {
       steps {
         sh """
