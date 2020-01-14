@@ -11,7 +11,7 @@ pipeline {
    stages {
     stage('Start') {
       steps {
-        githubNotify(buildState: 'PENDING')
+        githubNotify(status: 'PENDING')
       }
     }
     stage('Install and Build') {
