@@ -9,7 +9,7 @@ pipeline {
     pollSCM('H/15 * * * *')
   }
  
- stage('Build on master') {
+ stages('Build on master') {
     when {
         branch "master"
     }
