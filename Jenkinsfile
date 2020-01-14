@@ -11,10 +11,7 @@ pipeline {
    stages {
     stage('Install and Build') {
       steps {
-        sh """
-          sh script/build.sh
-            .
-        """
+          sh ('script/build.sh')
       }
     }
   }
