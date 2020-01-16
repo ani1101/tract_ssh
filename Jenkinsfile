@@ -1,4 +1,3 @@
-pipeline {
 node {
         //cleanup current user docker credentials
         sh 'rm  ~/.dockercfg || true'
@@ -14,6 +13,3 @@ node {
             customImage.push()
         }
 } 
-
-
-}
