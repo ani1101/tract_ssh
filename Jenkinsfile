@@ -13,7 +13,7 @@ node {
             //push image
             customImage.push()
         }
- 
+} 
 
 
 }
