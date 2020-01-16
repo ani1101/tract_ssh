@@ -19,12 +19,13 @@ pipeline {
           sh ('script/build.sh')
       }
     }
-    stages {
      stage('push docker image') {
        steps {
            docker.withRegistry("https://467883107641.dkr.ecr.eu-west-1.amazonaws.com", "ecr:us-east-1:CredentialId('ad803b9c-11dc-43b2-9fad-c3548722f082')") {
            docker.image("ecart-staging").push()
 	    }
+         }
+}
     stage('DEPLOY') {
       steps {
           sh ('script/trigger_codedeploy.sh')
@@ -32,4 +33,3 @@ pipeline {
     }
   }
 }
-
